@@ -19,7 +19,7 @@ feature:install odl-openflowplugin-flow-services-rest
 feature:install odl-ovsdb-southbound-impl-ui
 
 sudo apt-get install ansible git
-https://github.com/kpeartd/sdnkp.git
+git clone https://github.com/kpeartd/sdnkp.git
 git clone https://github.com/containernet/containernet.git
 
 cd containernet/ansible
