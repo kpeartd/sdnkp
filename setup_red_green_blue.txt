@@ -8,7 +8,7 @@ sudo ip netns exec red ip link set red-veth1 up
 #สร้าง host ชื่อ blue
 sudo ip netns add blue
 sudo ip link add blue-veth0 type veth peer name blue-veth1
-sudo ip link set blue-veth1 netns blue
+sudo ip link set blue-veth1 netns green
 sudo ip netns exec blue ip addr add 10.10.20.2/24 dev blue-veth1
 sudo ip netns exec blue ip link set blue-veth1 up
 
@@ -45,5 +45,5 @@ DETORIC setup
 
 sudo ip netns delete red
 sudo ip netns delete blue 
-sudo ip netns delete greeb
+sudo ip netns delete green
 sudo ovs-vsctl del-br s1
